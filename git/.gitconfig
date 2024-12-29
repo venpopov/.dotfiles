@@ -1,13 +1,13 @@
+[user]
+	name = Ven Popov
+	email = vencislav.popov@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINrYKyUfIP2cacvKiUUQwessSi5vO638aF3NX9Xi9k8B
 [gpg]
 	format = ssh
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [commit]
 	gpgsign = true
-[user]
-	name = Ven Popov
-	email = vencislav.popov@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINrYKyUfIP2cacvKiUUQwessSi5vO638aF3NX9Xi9k8B
 [color]
 	ui = true
 [push]
