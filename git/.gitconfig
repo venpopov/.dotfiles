@@ -1,0 +1,27 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
+[user]
+  name = Ven Popov
+  email = vencislav.popov@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINrYKyUfIP2cacvKiUUQwessSi5vO638aF3NX9Xi9k8B
+[color]
+  ui = true
+[push]
+  autoSetupRemote = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = code -n --wait
+	ignorecase = false
+[alias]
+	ignore = update-index --skip-worktree
+	unignore = update-index --no-skip-worktree
+	ignored = git ls-files -v | grep \"^S\"

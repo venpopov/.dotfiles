@@ -1,0 +1,8 @@
+{
+    "restore_source_documents": false,
+    "save_workspace": "never",
+    "load_workspace": false,
+    "initial_working_directory": "~",
+    "restore_last_project": false,
+    "posix_terminal_shell": "zsh"
+}
