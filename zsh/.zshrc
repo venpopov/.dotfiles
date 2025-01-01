@@ -36,6 +36,7 @@ export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/
 alias l='ls -lAh'
 alias R='R --no-save'
 alias r="radian"
+alias python="python3"
 alias qp="quarto preview --render all"
 alias update_website="rsync -avz --progress --delete --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r ~/venpopov.com/_site/ venpopov.com:/home4/venpopov/public_html/"
 alias create_temp_dir='temp_dir=$(mktemp -d) && cd $temp_dir'
