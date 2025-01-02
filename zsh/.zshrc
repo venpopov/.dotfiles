@@ -18,9 +18,9 @@ plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 
+# Personal executables
+export PATH="$PATH:$HOME/bin"
 
-# Created by `pipx` on 2024-12-25 15:32:11
-# export PATH="$PATH:$HOME/.local/bin"
 
 # Colorize man pages with bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
