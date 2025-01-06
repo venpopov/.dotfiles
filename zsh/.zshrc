@@ -49,3 +49,15 @@ function lgit() {
   git commit -a -m "$1"
   git push
 }
+
+cd_to_dir() {
+    local selected_dir
+    selected_dir=$(fd -t d . "$1" | fzf +m --height 50% --preview 'tree -C {}')
+    if [[ -n "$selected_dir" ]]; then
+        # Change to the selected directory
+        cd "$selected_dir" || return 1
+    fi
+}
+
+alias cdd='cd_to_dir ~ -E Library'
+alias cds='cd_to_dir'
