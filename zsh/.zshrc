@@ -38,7 +38,7 @@ alias R='R --no-save'
 alias r="radian"
 alias python="python3"
 alias qp="quarto preview --render all"
-alias update_website="rsync -avz --progress --delete --chmod=Du=rwx,Dgo=rx,Fu=rw,Fgo=r ~/venpopov.com/_site/ venpopov.com:/home4/venpopov/public_html/"
+alias update_website="quarto publish gh-pages --no-prompt --no-render --no-browser"
 alias create_temp_dir='temp_dir=$(mktemp -d) && cd $temp_dir'
 
 
@@ -61,3 +61,7 @@ cd_to_dir() {
 
 alias cdd='cd_to_dir ~ -E Library'
 alias cds='cd_to_dir'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
