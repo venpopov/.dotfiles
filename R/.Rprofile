@@ -22,9 +22,6 @@ if (interactive()) {
   require(usethis, quietly = TRUE)
   require(gert, quietly = TRUE)
   require(fs, quietly = TRUE)
-  require(rlang, quietly = TRUE)
-  require(jsonlite, quietly = TRUE)
-  require(httpgd, quietly = TRUE)
 }
 
 
