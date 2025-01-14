@@ -21,8 +21,10 @@ if (interactive()) {
   require(reprex, quietly = TRUE)
   require(usethis, quietly = TRUE)
   require(gert, quietly = TRUE)
-  # require(targets, quietly = TRUE)
   require(fs, quietly = TRUE)
+  require(rlang, quietly = TRUE)
+  require(jsonlite, quietly = TRUE)
+  require(httpgd, quietly = TRUE)
 }
 
 
