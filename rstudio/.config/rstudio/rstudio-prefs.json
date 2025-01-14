@@ -5,5 +5,5 @@
     "initial_working_directory": "~",
     "restore_last_project": false,
     "posix_terminal_shell": "zsh",
-    "editor_theme": "Solarized Dark"
+    "editor_theme": "Monokai"
 }
