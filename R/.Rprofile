@@ -35,10 +35,10 @@ options(
       "Ven", "Popov",
       email = "vencislav.popov@gmail.com",
       role = c("aut", "cre"),
-      comment = c(ORCID = "0000-0002-8073-4199"),
-      Additional_repositories = "https://stan-dev.r-universe.dev"
+      comment = c(ORCID = "0000-0002-8073-4199")
     ),
-    License = "MIT + file LICENSE"
+    License = "MIT + file LICENSE",
+    Additional_repositories = "https://stan-dev.r-universe.dev"
   ),
   usethis.destdir = "~/GitHub",
   usethis.overwrite = TRUE,
