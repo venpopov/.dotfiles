@@ -43,6 +43,38 @@ alias create_temp_dir='temp_dir=$(mktemp -d) && cd $temp_dir'
 alias gs='git status'
 
 
+destroy_github_repo() {
+  local proj="$1"
+  
+  # Check if the folder exists
+  if [[ ! -d "$proj" ]]; then
+    echo "Directory $proj does not exist."
+    return 1
+  fi
+  
+  # Check if the folder is a git repository
+  if [[ ! -d "$proj/.git" ]]; then
+    echo "Directory $proj is not a git repository."
+    return 1
+  fi
+  
+  # Check if there is a remote repository
+  cd "$proj" || return 1
+  local remote_url
+  remote_url=$(git remote get-url upstream)
+  
+  if [[ -z "$remote_url" ]]; then
+    echo "No remote repository found for $proj."
+    return 1
+  fi
+
+  Rscript -e "renv::deactivate(clean = TRUE)"
+  
+  # Delete the local folder and the remote repository
+  cd ..
+  rm -fr "$proj" && gh repo delete "$remote_url" --yes
+}
+
 
 # Lazy git
 function lgit() {
