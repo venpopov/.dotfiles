@@ -39,6 +39,8 @@ options(
     ),
     License = "MIT + file LICENSE"
   ),
+  usethis.destdir = "~/GitHub",
+  usethis.overwrite = TRUE,
   
   # default cran repo to avoid prompts when installing packages
   # repos = c(CRAN = "https://cran.r-project.org"),
