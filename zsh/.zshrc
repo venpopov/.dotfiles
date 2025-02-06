@@ -24,6 +24,12 @@ source $ZSH/oh-my-zsh.sh
 # Personal executables
 export PATH="$PATH:$HOME/bin"
 
+# CMDSTAN path
+CMDSTAN_PATH=$(Rscript -e 'cat(try(cmdstanr::cmdstan_path(), silent=TRUE))' 2>/dev/null)
+if [ ! -z "$CMDSTAN_PATH" ] && [ -d "$CMDSTAN_PATH" ]; then
+    export PATH="$CMDSTAN_PATH/bin:$PATH"
+fi
+
 
 # Colorize man pages with bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
