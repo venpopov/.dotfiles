@@ -1,9 +1,1 @@
-vim.opt.showmatch = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.expandtab = true
-vim.bo.softtabstop = 2
-vim.opt.autoindent = true
-vim.wo.relativenumber = true
-vim.opt.cc = "120"
-vim.opt.syntax = on
+require("config.lazy")
