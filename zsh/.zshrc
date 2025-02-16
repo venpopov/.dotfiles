@@ -39,6 +39,7 @@ export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/
 
 
 # custom programs/aliases
+alias t='tree'
 alias l='ls -lAh'
 alias R='R --no-save'
 alias r="radian"
